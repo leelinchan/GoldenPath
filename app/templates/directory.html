@@ -1,0 +1,290 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory | GoldenPath</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'directory.css' %}">
+</head>
+<body>
+<!-- Navigation Bar -->
+  {% include 'navbar.html' %}
+
+<!-- Directory Header -->
+  <div class="directory-header">
+      <div class="directory-text">
+          <h1>Directory</h1>
+          <p>Explore campus buildings and facilities</p>
+      </div>
+      <a class="back-link" href="{% url 'explore' %}">Back to explore</a>
+  </div>
+
+  <div class="directory-search-bar">
+    <input type="text" id="directorySearchInput" placeholder="Search building..." onkeyup="filterBuildings()" />
+  </div>
+
+<!-- Phelan Hall -->
+  <div class="directory-container1">
+    <div class="directory-content">
+      <img src="/static/assets/phelan.png" alt="Phelan Hall">
+        <div class="directory-info">
+          <div class="directory-top-row">
+            <div class="directory-title">
+              <h2 class="building-name">Phelan Hall</h2>
+            </div>
+          </div>
+            <p>Floors: 1, 2, 3</p>
+            <p class="subtext">Located beside Santos Hall and Xavier Hall</p>
+
+            <div class="directory-footer-links">
+              <a href="/map/?building=Phelan" class="info-link">
+              <span class="emoji">🗺️</span>
+              <span class="text">See on map</span></a><a href="#" class="info-link">
+              <span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+            </div>
+        </div>
+            <div class="top-right-buttons">
+              <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+              <a href="{% url 'phelan' %}" class="see-more-rooms-btn">See more rooms<i class="fas fa-chevron-right"></i>  
+
+              </a>
+            </div>
+    </div>   
+  </div>
+<!-- Santos Hall -->
+  <div class="directory-container1">
+    <div class="directory-content">
+      <img src="/static/assets/santos.png" alt="Santos Hall">
+      <div class="directory-info">
+        <div class="directory-top-row">
+          <div class="directory-title">
+            <h2 class="building-name">Santos Hall</h2>
+          </div>
+        </div>
+        <p>Floors: 1, 2, 3</p>
+        <p class="subtext">Located beside Phelan Hall and Xavier Hall</p>
+
+        <div class="directory-footer-links">
+          <a href="/map/?building=Santos" class="info-link"><span class="emoji">️🗺️</span><span class="text">See on map</span></a>
+          <a href="#" class="info-link"><span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+        </div>
+      </div>
+      <div class="top-right-buttons">
+        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+        <a a href="{% url 'santos' %}" class="see-more-rooms-btn">See more rooms <i class="fas fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+<!-- Burns Hall -->
+  <div class="directory-container1">
+    <div class="directory-content">
+      <img src="/static/assets/burns.png" alt="Burns Hall">
+      <div class="directory-info">
+        <div class="directory-top-row">
+          <div class="directory-title">
+            <h2 class="building-name">Burns Hall</h2>
+          </div>
+        </div>
+        <p>Floors: 1, 2, 3</p>
+        <p class="subtext">Located at the left side of the University Church</p>
+
+        <div class="directory-footer-links">
+          <a href="#" class="info-link"><span class="emoji">️🗺️</span><span class="text">See on map</span></a>
+          <a href="#" class="info-link"><span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+        </div>
+      </div>
+
+      <div class="top-right-buttons">
+        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+        <a href="your-link-here" class="see-more-rooms-btn">See more rooms <i class="fas fa-chevron-right"></i> 
+        </a>
+      </div>
+    </div>
+  </div>
+<!-- James J. O'Brien, S. J. Library -->
+  <div class="directory-container1">
+    <div class="directory-content">
+      <img src="/static/assets/library.png" alt="Library">
+      <div class="directory-info">
+        <div class="directory-top-row">
+          <div class="directory-title">
+            <h2 class="building-name">James J. O'Brien, S. J. Library</h2>
+          </div>
+        </div>
+        <p>Floors: 1, 2, 3</p>
+        <p class="subtext"> Situated centrally on campus</p>
+
+        <div class="directory-footer-links">
+          <a href="/map/?building=Phelan" class="info-link"><span class="emoji">🗺️</span><span class="text">See on map</span></a>
+          <a href="#" class="info-link"><span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+        </div>
+      </div>
+      <div class="top-right-buttons">
+        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+        <a href="#" class="see-more-rooms-btn">See more rooms <i class="fas fa-chevron-right"></i></a>
+
+      </div>
+    </div>
+  </div>
+<!-- Dolan Building -->
+  <div class="directory-container1">
+    <div class="directory-content">
+      <img src="/static/assets/dolan.png" alt="Dolan Building">
+      <div class="directory-info">
+        <div class="directory-top-row">
+          <div class="directory-title">
+            <h2 class="building-name">Dolan Building</h2>
+          </div>
+        </div>
+        <p>Floors: 1, 2, 3, 4</p>
+        <p class="subtext">Located beside Phelan Hall and Adriatico Bldg.</p>
+
+        <div class="directory-footer-links">
+           <a href="/map/?building=Phelan" class="info-link">
+            <span class="emoji">🗺️</span><span class="text">See on map</span></a><a href="#" class="info-link">
+            <span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+        </div>
+      </div>
+
+      <div class="top-right-buttons">
+        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+        <a href="#" class="see-more-rooms-btn">See more rooms <i class="fas fa-chevron-right"></i> 
+        </a>
+      </div>
+    </div>
+  </div>
+<!-- Alingal Hall -->
+  <div class="directory-container1">
+    <div class="directory-content">
+      <img src="/static/assets/alingal.png" alt="Alingal Hall">
+      <div class="directory-info">
+        <div class="directory-top-row">
+          <div class="directory-title">
+            <h2 class="building-name">Alingal Hall</h2>
+          </div>
+        </div>
+        <p>Floors: 1, 2, 3, 4, 5</p>
+        <p class="subtext">Located at the back of Bonoan Hall, near CC</p>
+
+        <div class="directory-footer-links">
+          <a href="/map/?building=Phelan" class="info-link"><span class="emoji">🗺️</span><span class="text">See on map</span></a>
+          <a href="#" class="info-link"><span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+        </div>
+      </div>
+
+      <div class="top-right-buttons">
+        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+        <a href="#"class="see-more-rooms-btn">See more rooms <i class="fas fa-chevron-right"></i> 
+        </a>
+      </div>
+    </div>
+  </div>  
+<!-- University's Covered Courts -->  
+  <div class="directory-container1">
+    <div class="directory-content">
+      <img src="/static/assets/cc.png" alt="CC">
+      <div class="directory-info">
+        <div class="directory-top-row">
+          <div class="directory-title">
+            <h2 class="building-name">University's Covered Courts</h2>
+          </div>
+        </div>
+        <p>Ground floor</p>
+        <p class="subtext">Located beside Alingal Hall, near Madrigal Bldg.</p>
+
+        <div class="directory-footer-links">
+          <a href="/map/?building=Phelan" class="info-link"><span class="emoji">🗺️</span><span class="text">See on map</span></a>
+          <a href="#" class="info-link"><span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+        </div>
+      </div>
+
+      <div class="top-right-buttons">
+        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+        <a href="#" class="see-more-rooms-btn">See more rooms <i class="fas fa-chevron-right"></i> 
+        </a>
+      </div>
+    </div>
+  </div>
+<!-- University's Gymnasium -->
+  <div class="directory-container1">
+    <div class="directory-content">
+      <img src="/static/assets/gym.png" alt="GYM">
+      <div class="directory-info">
+        <div class="directory-top-row">
+          <div class="directory-title">
+            <h2 class="building-name">University's Gymnasium</h2>
+          </div>
+        </div>
+          <p>Ground floor</p>
+          <p class="subtext">Located beside Xavier Hall, near Phelan Hall</p>
+
+          <div class="directory-footer-links">
+            <a href="/map/?building=Phelan" class="info-link"><span class="emoji">🗺️</span><span class="text">See on map</span></a>
+            <a href="#" class="info-link"><span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+          </div>
+      </div>
+
+      <div class="top-right-buttons">
+        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+        <a href="#" class="see-more-rooms-btn">See more rooms <i class="fas fa-chevron-right"></i> 
+        </a>
+      </div>
+    </div>
+  </div>
+<!-- Xavier Hall -->
+  <div class="directory-container1">
+    <div class="directory-content">
+      <img src="/static/assets/xavier.png" alt="Xaviers">
+      <div class="directory-info">
+        <div class="directory-top-row">
+          <div class="directory-title">
+            <h2 class="building-name">Xavier Hall</h2>
+          </div>
+        </div>
+          <p>Floors: 1st (Food Stalls, RR), 2nd (Offices), 3rd (Dormitory)</p>
+          <p class="subtext">Located beside University's Gymnasium, near Phelan Hall and Santos Hall</p>
+
+          <div class="directory-footer-links">
+            <a href="/map/?building=Phelan" class="info-link"><span class="emoji">🗺️</span><span class="text">See on map</span></a>
+            <a href="#" class="info-link"><span class="emoji">🔧</span><span class="text">See services and amenities</span></a>
+          </div>
+      </div>
+
+      <div class="top-right-buttons">
+        <i class="far fa-bookmark save-icon" onclick="toggleSave(this)"></i>
+        <a href="#" class="see-more-rooms-btn">See more rooms <i class="fas fa-chevron-right"></i> 
+        </a>
+      </div>
+    </div>
+  </div>
+<!-- Search Input -->
+  <script>
+    function filterBuildings() {
+      const input = document.getElementById('directorySearchInput');
+      const filter = input.value.toLowerCase();
+      const cards = document.querySelectorAll('.directory-container1');
+
+      cards.forEach(card => {
+        const buildingName = card.querySelector('.building-name').textContent.toLowerCase();
+          if (buildingName.includes(filter)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+      });
+    }
+  </script>
+
+  <script>
+    function toggleSave(icon) {
+      icon.classList.toggle('far'); 
+      icon.classList.toggle('fas');   
+      icon.classList.toggle('saved'); 
+    }
+  </script>
+</body>
+</html>    
