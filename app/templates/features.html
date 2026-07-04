@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoldenPath | Features</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#071420;
+color:white;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:0px 70px 0px;
+
+}
+
+.hero-left{
+
+width:42%;
+
+}
+
+.hero-left h1{
+
+font-size:64px;
+font-weight:800;
+margin-bottom:20px;
+
+}
+
+.hero-left p{
+
+font-size:18px;
+line-height:1.8;
+color:#C4D0DD;
+
+}
+
+.hero-right{
+
+width:54%;
+display:flex;
+justify-content:flex-end;
+
+}
+
+.hero-right img{
+
+width:100%;
+max-width:720px;
+
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+padding:20px 70px 60px;
+
+}
+
+.card{
+
+background:#111C28;
+
+border-radius:20px;
+
+padding:28px;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.icon{
+
+width:70px;
+height:70px;
+
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:30px;
+
+margin-bottom:20px;
+
+}
+
+.blue{background:#2563EB;}
+.green{background:#16A34A;}
+.purple{background:#7C3AED;}
+.gold{background:#CA8A04;}
+.cyan{background:#0891B2;}
+.orange{background:#EA580C;}
+.teal{background:#0284C7;}
+.pink{background:#DB2777;}
+
+.card h3{
+
+font-size:25px;
+margin-bottom:12px;
+
+}
+
+.card p{
+
+line-height:1.8;
+color:#BFD0DC;
+
+}
+
+/* ================= CTA ================= */
+
+.cta{
+
+margin:0 70px 70px;
+
+background:#111C28;
+
+border-radius:22px;
+
+padding:35px 40px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+.cta h2{
+
+font-size:32px;
+margin-bottom:10px;
+
+}
+
+.cta p{
+
+color:#C2CEDA;
+line-height:1.8;
+
+max-width:800px;
+
+}
+
+.cta button{
+
+background:#1560D3;
+
+color:white;
+
+border:none;
+
+padding:18px 35px;
+
+border-radius:12px;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.cta button:hover{
+
+background:#0B4FB4;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px){
+
+.features{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.hero-left,
+.hero-right{
+
+width:100%;
+
+}
+
+.hero-right{
+
+margin-top:40px;
+justify-content:center;
+
+}
+
+.cta{
+
+flex-direction:column;
+gap:25px;
+text-align:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+
+.hero{
+
+padding:40px 25px;
+
+}
+
+.hero-left h1{
+
+font-size:48px;
+
+}
+
+.hero-left p{
+
+font-size:18px;
+
+}
+
+.features{
+
+padding:25px;
+
+grid-template-columns:1fr;
+
+}
+
+.cta{
+
+margin:25px;
+padding:25px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+  {% include 'navbar.html' %}
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>Features</h1>
+
+<p>
+
+GoldenPath provides powerful tools that help students,
+faculty, staff, and visitors navigate the campus,
+discover facilities, and access essential services
+through one simple and modern platform.
+
+</p>
+
+</div>
+
+<div class="hero-right">
+
+<img src="/static/assets/features-campus.png" alt="Campus Features">
+
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="card">
+<div class="icon blue">🔎︎</div>
+<h3>Smart Directory</h3>
+<p>Quickly search buildings, classrooms, laboratories, offices, and campus facilities.</p>
+</div>
+
+<div class="card">
+<div class="icon green">🗺️</div>
+<h3>Interactive Map</h3>
+<p>Navigate the campus with an interactive map and step-by-step directions.</p>
+</div>
+
+<div class="card">
+<div class="icon purple">🏠︎</div>
+<h3>Room Availability</h3>
+<p>Check room schedules and availability before making reservations.</p>
+</div>
+
+<div class="card">
+<div class="icon gold">𖤘</div>
+<h3>Favorites</h3>
+<p>Bookmark your favorite buildings, rooms, and destinations for quick access.</p>
+</div>
+
+<div class="card">
+<div class="icon cyan">🕭</div>
+<h3>Announcements</h3>
+<p>Stay informed with campus news, emergency alerts, and upcoming events.</p>
+</div>
+
+<div class="card">
+<div class="icon orange">✉︎</div>
+<h3>Feedback & Support</h3>
+<p>Submit feedback, report problems, or contact support whenever you need help.</p>
+</div>
+
+<div class="card">
+<div class="icon teal">✋︎</div>
+<h3>Accessibility</h3>
+<p>Locate ramps, elevators, accessible entrances, and other inclusive facilities.</p>
+</div>
+
+<div class="card">
+<div class="icon pink">🀆</div>
+<h3>Mobile Friendly</h3>
+<p>Access GoldenPath anywhere using your smartphone, tablet, or desktop device.</p>
+</div>
+
+</section>
+
+<section class="cta">
+
+<div>
+
+<h2>Built for Students, Faculty, and Visitors</h2>
+
+<p>
+
+GoldenPath is designed to make campus navigation,
+room discovery, and facility information fast,
+accessible, and convenient for everyone.
+
+</p>
+
+</div>
+
+<button>
+
+Explore Directory →
+
+</button>
+
+</section>
+
+</body>
+</html>

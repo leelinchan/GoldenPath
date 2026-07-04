@@ -26,6 +26,10 @@ def directory_view(request):
 @login_required(login_url='/login/')
 def explore_view(request):
     return render(request, 'explore.html', {'user': request.user})
+
+@login_required(login_url='/login/')
+def features_view(request):
+    return render(request, 'features.html', {'user': request.user})
   
 @login_required(login_url='/login/')
 def settings_view(request):
