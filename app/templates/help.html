@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoldenPath - Help & FAQs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,sans-serif;
+}
+
+body{
+background:#071420;
+color:white;
+}
+
+/*================ MAIN =================*/
+
+.container{
+padding:60px;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+margin-bottom:45px;
+}
+
+.header h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.header p{
+font-size:18px;
+color:#c6d3df;
+}
+
+.search{
+width:420px;
+}
+
+.search input{
+width:100%;
+padding:18px 25px;
+background:transparent;
+border:2px solid rgba(255,255,255,.25);
+border-radius:40px;
+color:white;
+font-size:17px;
+}
+
+/*================ GRID =================*/
+
+.layout{
+
+display:grid;
+grid-template-columns:3fr 1fr;
+gap:40px;
+
+}
+
+/*=============== CARDS ===============*/
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-top:30px;
+margin-bottom:50px;
+}
+
+.card{
+
+background:#111C28;
+padding:30px;
+border-radius:20px;
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.icon{
+
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+margin-bottom:25px;
+
+}
+
+.blue{background:#1D4ED8;}
+.green{background:#16A34A;}
+.purple{background:#7C3AED;}
+.orange{background:#D97706;}
+
+.card h3{
+
+margin-bottom:12px;
+font-size:24px;
+
+}
+
+.card p{
+
+color:#b7c6d3;
+line-height:1.7;
+margin-bottom:25px;
+
+}
+
+.card a{
+
+color:#4EA2FF;
+text-decoration:none;
+font-weight:600;
+
+}
+
+/*============== FAQ =================*/
+
+.faq-title{
+
+font-size:36px;
+margin-bottom:25px;
+
+}
+
+details{
+
+background:#111C28;
+margin-bottom:18px;
+border-radius:15px;
+padding:22px;
+
+}
+
+summary{
+
+cursor:pointer;
+font-size:20px;
+font-weight:600;
+
+}
+
+details p{
+
+margin-top:18px;
+color:#b7c6d3;
+line-height:1.8;
+
+}
+
+/*============= SIDEBAR ==============*/
+
+.sidebar{
+
+display:flex;
+flex-direction:column;
+gap:25px;
+
+}
+
+.side-card{
+
+background:#111C28;
+padding:30px;
+border-radius:20px;
+
+}
+
+.side-card h2{
+
+margin-bottom:25px;
+
+}
+
+.contact{
+
+margin-bottom:25px;
+
+}
+
+.contact h4{
+
+margin-bottom:8px;
+
+}
+
+.contact p{
+
+color:#b7c6d3;
+line-height:1.7;
+
+}
+
+.btn{
+
+margin-top:20px;
+background:#1560D3;
+padding:16px;
+text-align:center;
+border-radius:12px;
+font-weight:600;
+cursor:pointer;
+
+}
+
+.quick a{
+
+display:flex;
+justify-content:space-between;
+padding:18px 0;
+text-decoration:none;
+color:white;
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+/*================ RESPONSIVE =================*/
+
+@media(max-width:1200px){
+
+.cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+.layout{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:700px){
+
+nav{
+padding:20px;
+flex-direction:column;
+height:auto;
+gap:20px;
+}
+
+.menu{
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.container{
+padding:30px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.header{
+flex-direction:column;
+gap:25px;
+}
+
+.search{
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+  {% include 'navbar.html' %}
+
+<div class="container">
+
+<div class="header">
+
+<div>
+
+<h1>Help & FAQs</h1>
+
+<p>Find answers and get the help you need.</p>
+
+</div>
+
+<div class="search">
+
+<input placeholder="Search help articles...">
+
+</div>
+
+</div>
+
+<div class="layout">
+
+<div>
+
+<h2 style="font-size:36px;margin-bottom:25px;">Popular Topics</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon blue">🏬</div>
+
+<h3>Buildings & Facilities</h3>
+
+<p>Find information about campus buildings, rooms, accessibility, and more.</p>
+
+<a href="#">View articles →</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon green">🗺️</div>
+
+<h3>Maps & Directions</h3>
+
+<p>Learn how to navigate around campus and locate important destinations.</p>
+
+<a href="#">View articles →</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon purple">📅</div>
+
+<h3>Services & Amenities</h3>
+
+<p>Learn about campus services, facilities, and available student resources.</p>
+
+<a href="#">View articles →</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon orange">👤</div>
+
+<h3>Account & Access</h3>
+
+<p>Manage your profile, permissions, and account-related concerns.</p>
+
+<a href="#">View articles →</a>
+
+</div>
+
+</div>
+
+<h2 class="faq-title">
+
+Frequently Asked Questions
+
+</h2>
+
+<details>
+
+<summary>How do I find a specific building on campus?</summary>
+
+<p>Go to the Directory page and search for the building name. You can also open the interactive map to view directions.</p>
+
+</details>
+
+<details>
+
+<summary>Can I reserve a room online?</summary>
+
+<p>Yes. Browse available rooms, choose a schedule, and submit your reservation request directly from GoldenPath.</p>
+
+</details>
+
+<details>
+
+<summary>How do I report an issue or submit feedback?</summary>
+
+<p>Use the Contact Support section or the feedback form available inside the Help Center.</p>
+
+</details>
+
+<details>
+
+<summary>Who do I contact for accessibility concerns?</summary>
+
+<p>Please contact the Student Affairs Office or email our support team for assistance.</p>
+
+</details>
+
+</div>
+
+<div class="sidebar">
+
+<div class="side-card">
+
+<h2>Still need help?</h2>
+
+<div class="contact">
+
+<h4>📧 Email Support</h4>
+
+<p>support@goldenpath.edu</p>
+
+<p>Response within 24 hours</p>
+
+</div>
+
+<div class="contact">
+
+<h4>📞 Call Us</h4>
+
+<p>(02) 8123-4567</p>
+
+<p>Mon - Fri | 8:00 AM - 5:00 PM</p>
+
+</div>
+
+<div class="btn">
+
+Contact Support
+
+</div>
+
+</div>
+
+<div class="side-card quick">
+
+<h2>Quick Links</h2>
+
+<a href="#"><span>Campus Directory</span><span>›</span></a>
+<a href="#"><span>Interactive Map</span><span>›</span></a>
+<a href="#"><span>Submit Feedback</span><span>›</span></a>
+<a href="#"><span>Room Reservation Guide</span><span>›</span></a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

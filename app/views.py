@@ -16,12 +16,20 @@ def homepage(request):
     return render(request, 'index.html', {'user': request.user})
 
 @login_required(login_url='/login/')
+def help_view(request):
+    return render(request, 'help.html', {'user': request.user})
+
+@login_required(login_url='/login/')
 def directory_view(request):
     return render(request, 'directory.html', {'user': request.user})
 
 @login_required(login_url='/login/')
 def explore_view(request):
     return render(request, 'explore.html', {'user': request.user})
+
+@login_required(login_url='/login/')
+def features_view(request):
+    return render(request, 'features.html', {'user': request.user})
   
 @login_required(login_url='/login/')
 def settings_view(request):
